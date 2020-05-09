@@ -111,7 +111,7 @@ def get_ratio_metric_data(
 
 class PrometheusMetricQuery():
     def __init__(self, query_spec, versions):
-        prometheus_url = os.getenv(constants.ITER8_ANALYTICS_METRICS_BACKEND_URL_ENV)
+        prometheus_url = os.getenv(constants.METRICS_BACKEND_URL_ENV)
         self.prometheus_url = prometheus_url + "/api/v1/query"
         self.query_spec = query_spec
         self.version_labels_to_id = {

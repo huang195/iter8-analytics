@@ -4166,7 +4166,7 @@ class TestUnifiedAnalyticsAPI(unittest.TestCase):
         """Setup common to all tests in this class"""
 
         cls.client = TestClient(fastapi_app.app)
-        cls.backend_url = os.getenv(constants.ITER8_ANALYTICS_METRICS_BACKEND_URL_ENV)
+        cls.backend_url = os.getenv(constants.METRICS_BACKEND_URL_ENV)
         cls.metrics_endpoint = f'{cls.backend_url}/api/v1/query'
         log.info('Completed initialization for FastAPI based  REST API tests')
 
